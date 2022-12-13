@@ -14,6 +14,11 @@
     <meta name="citation_issn" content="{{@custom.issn}}">
     {{/if}}
 
+    {{#post}}
+    <meta name="dc.identifier" content="{{canonical_url}}">
+    <meta name="citation_doi" content="{{canonical_url}}">
+    {{/post}}
+
     {{ghost_head}}
 </head>
 

@@ -22,6 +22,19 @@
 
             <section class="gh-content gh-canvas">
                 {{content}}
+
+                {{#if @custom.license_url}}
+                    <div class="gh-license">
+                        Copyright © {{date format="YYYY"}} {{#foreach authors}}{{#if @first}}{{name}}{{else}}, {{name}}{{/if}}{{/foreach}}. Distributed under the terms of the
+                        <a
+                            class="gh-license-link"
+                            href="{{@custom.license_url}}"
+                        >
+                            {{@custom.license_text}}.
+                        </a>
+                    </div>
+                {{/if}}
+            </section> 
             </section>
 
         </article>

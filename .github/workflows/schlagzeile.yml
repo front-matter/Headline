@@ -2,8 +2,7 @@ name: Deploy Theme
 on:
   push:
     branches:
-      - main
-      - master
+      - schlagzeile
 jobs:
   deploy:
     runs-on: ubuntu-22.04

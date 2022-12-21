@@ -15,9 +15,6 @@
     <meta name="citation_author" content="{{name}}">
     {{/foreach}}
     <meta name="citation_date" content="{{date format="YYYY-MM-DD"}}"/>
-    {{#foreach keywords as keyword}}  
-    <meta name="citation_keywords" content="{{keyword}}"/>
-    {{/foreach}}
     {{/post}}
     <meta name="citation_publisher" content="{{@site.title}}"/>
     <meta name="citation_language" content="{{@site.locale}}">
@@ -34,9 +31,6 @@
     <meta name="dc.title" content="{{title}}" />
     <meta name="dc.description" content="{{excerpt}}" />
     <meta name="dc.date" content="{{date format="YYYY-MM-DD"}}" />
-    {{#foreach keywords as keyword}}
-    <meta name="dc.subject" content="{{keyword}}" />
-    {{/foreach}}
     {{/post}}
     <meta name="dc.language" content="{{@site.locale}}" />   
     <meta name="dc.format" content="text/html" /> 

@@ -15,8 +15,11 @@
     <meta name="citation_author" content="{{name}}">
     {{/foreach}}
     <meta name="citation_date" content="{{date format="YYYY-MM-DD"}}"/>
+    {{#foreach tags}}  
+    <meta name="citation_keywords" content="{{name}}"/>
+    {{/foreach}}
     {{/post}}
-    <meta name="citation_publisher" content="{{@site.title}}"/>
+    <meta name="citation_journal_title" content="{{@site.title}}"/>
     <meta name="citation_language" content="{{@site.locale}}">
 
     {{#if @custom.issn}}
@@ -31,6 +34,9 @@
     <meta name="dc.title" content="{{title}}" />
     <meta name="dc.description" content="{{excerpt}}" />
     <meta name="dc.date" content="{{date format="YYYY-MM-DD"}}" />
+    {{#foreach tags}}
+    <meta name="dc.subject" content="{{name}}" />
+    {{/foreach}}
     {{/post}}
     <meta name="dc.language" content="{{@site.locale}}" />   
     <meta name="dc.format" content="text/html" /> 

@@ -7,17 +7,41 @@
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
-    {{#if @custom.license_url}}
-    <meta name="DCTERMS.license" content="{{@custom.license_url}}" />
-    {{/if}}
+    {{#post}}
+    <meta name="citation_doi" content="{{canonical_url}}">
+    <meta name="citation_title" content="{{title}}">
+    <meta name="citation_abstract" content="{{excerpt}}">
+
+    <meta name="citation_author" content="{{author}}">
+
+    <meta name="citation_date" content="{{publishedDate}}"/>
+    <meta name="citation_keywords" content="{{keywords}}"/>
+    {{/post}}
+    <meta name="citation_publisher" content="{{site.title}}"/>
+    <meta name="citation_language" content="{{site.locale}}">
+
     {{#if @custom.issn}}
     <meta name="citation_issn" content="{{@custom.issn}}">
     {{/if}}
 
     {{#post}}
     <meta name="dc.identifier" content="{{canonical_url}}">
-    <meta name="citation_doi" content="{{canonical_url}}">
+
+    <meta name="dc.creator" content="{{author}}" />
+
+    <meta name="dc.title" content="{{title}}" />
+    <meta name="dc.description" content="{{excerpt}}" />
+    <meta name="dc.date.created" content="{{publishedDate}}" />
+    <meta name="dc.date.modified" content="{{modifiedDate}}" />
+    <meta name="dc.subject" content="{{keywords}}" />
     {{/post}}
+    <meta name="dc.language" content="{{site.locale}}" />   
+    <meta name="dc.format" content="text/html" /> 
+    <meta name="dc.source" content="{{site.title}}" />
+    <meta name="dc.type" content="article" />
+    {{#if @custom.license_url}}
+    <meta name="dc.rights" content="{{@custom.license_url}}" />
+    {{/if}}
 
     {{ghost_head}}
 </head>

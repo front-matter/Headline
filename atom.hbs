@@ -21,6 +21,7 @@
 		{{#foreach tags}}
 		<category term="{{name}}"/>
 		{{/foreach}}
+        <media:content url="{{feature_image}}" medium="image"/>
         <content type="html"><![CDATA[ <p><img src="{{feature_image}}"></p>{{content}} ]]></content>
         {{#foreach authors}}
 		<author>

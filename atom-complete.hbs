@@ -10,7 +10,7 @@
     <generator uri="https://ghost.org" version="5.52">Ghost</generator>
     <updated>{{date format="YYYY-MM-DDTHH:mm:ssZ"}}</updated>
     
-	{{#get "posts" limit="25" page="1" order="published_at desc" include="authors,tags"}}
+	{{#get "posts" limit="500" page="1" order="published_at desc" include="authors,tags"}}
 	{{#foreach posts}}
     <entry>
 		<title><![CDATA[ {{title}} ]]></title>
